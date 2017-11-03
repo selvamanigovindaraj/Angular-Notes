@@ -1,0 +1,67 @@
+ANGULAR 2
+	-Angular is a framework for building client applications in HTML and either JavaScript 
+	or a language like TypeScript that compiles to JavaScript.
+	-Angular applications by composing HTML templates with Angularized markup, 
+	writing component classes to manage those templates,
+	 adding application logic in services, and boxing components and services in modules.
+	- launch the app by bootstrapping the root module. 
+MODULES:
+	*Angular apps are modular and Angular has its own modularity system called NgModules.
+	*Every Angular app has at least one NgModule class, the root module, conventionally named AppModule.
+	*declarations - the view classes that belong to this module.
+	 Angular has three kinds of view classes: 
+	 components,
+	  directives, and 
+	  pipes.
+	exports - the subset of declarations that should be visible and usable in the component templates of other modules.
+	imports - other modules whose exported classes are needed by component templates declared in this module.
+	providers - creators of services that this module contributes to the global collection of services; 
+	they become accessible in all parts of the app.
+	bootstrap - the main application view, called the root component, that hosts all other app views.
+	 Only the root module should set this bootstrap property.
+
+	(See Capture1 img)
+
+Components
+	A component controls a patch of screen called a view.
+	Angular creates, updates, and destroys components as the user moves through the application.
+	 Your app can take action at each moment in this lifecycle through optional lifecycle hooks
+
+Templates:
+	 -A template is a form of HTML that tells Angular how to render the component.
+	 -A template looks like regular HTML, except for a few differences. Here is a template
+
+	 (See capture2)
+
+	- Although this template uses typical HTML elements like <h2> and <p>, it also has some differences.
+	  Code like *ngFor, {{hero.name}}, (click), [hero], and <hero-detail> uses Angular's template syntax.
+
+	-In the last line of the template, 
+	  the <hero-detail> tag is a custom element that represents a new component, 
+
+	  (see Capture3)
+
+
+
+Metadata
+	
+	-Metadata tells Angular how to process a class.
+	-(see Capture4)
+			-really is just a class. It's not a component until you tell Angular about it.
+			To tell Angular that HeroListComponent( Capture4) is a component, attach metadata to the class.
+	-In TypeScript, you attach metadata by using a decorato
+
+	(See capture5)
+		-Here is the @Component decorator, which identifies the class immediately below it as a component class.
+
+		-The @Component decorator takes a required configuration object with the information Angular needs to create and present the component and its view.
+
+	selector: 
+		CSS selector that tells Angular to create and insert an instance of this component where it finds a <hero-list> tag in parent HTML.
+	templateUrl:
+		 module-relative address of this component's HTML template, 
+	providers: 
+		array of dependency injection providers for services that the component requires.
+	 	This is one way to tell Angular that the component's constructor requires a Service
+
+		 ( see capture6 )
