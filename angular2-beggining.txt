@@ -65,3 +65,6 @@ Metadata
 	 	This is one way to tell Angular that the component's constructor requires a Service
 
 		 ( see capture6 )
+
+
+		 Great place to work to build your career and great workplace culture! You learn new things everyday and a a lot of opportunities for growth. Very relaxed atmosphere!.Wonderful management,awesome co-workers and excellent benefits.company encourages individuality and there are many options for advancement.
